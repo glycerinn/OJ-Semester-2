@@ -105,7 +105,7 @@ void poptengah(int index)
 		return;
 	
 	struct data *temp = head;
-	for(int i = 0 ; i < index-1 ; i++)
+	for(int i = 0 ; i < index-1; i++)
 		temp = temp->next;
 		
 	struct data *temp2 = temp->next;
@@ -185,8 +185,8 @@ void pop(int angka)
 		{
 			if (temp->nilai == angka)
 			{
-				//ketemu
 				poptengah(idx);
+				return;
 			}
 			else
 			{
@@ -206,6 +206,7 @@ void printall()
 		temp = temp->next;
 	}
 }
+
 int main()
 {
 	head = tail = NULL;
@@ -219,24 +220,10 @@ int main()
 	push(20);
 	push(50);
 	
+	pop(5);
+	
 	printall();
-	popdepan();
-	popbelakang();
-	poptengah(2);
-	
-	pop(1);
-	
-	popall();
-	/*
-	printf("%d", head->nilai);	//10
-	
-	printf("%d", head->next->next->next->nilai);	//1
-	
-	struct data *curr = head;
-	for(int i = 0 ; i < 5 ; i++)
-		curr = curr->next;
-		
-	printf("%d", curr->nilai);
-	*/
+
+
 	return 0;
 }

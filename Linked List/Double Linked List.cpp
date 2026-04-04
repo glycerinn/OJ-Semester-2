@@ -198,6 +198,7 @@ void pop(int angka)
 			if (temp->nilai == angka)
 			{
 				poptengah(idx);
+				return;
 			}
 			else
 			{
@@ -230,7 +231,7 @@ int main()
 	push(20);
 	push(50);
 	
-	pop(100);
+	pop(7);
 	
 	printall();
 	
