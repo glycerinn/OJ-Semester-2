@@ -109,9 +109,9 @@ int main() {
 	for(int xx = 0 ; xx < k ; xx++)
 	{
 		if (hasil[xx].op == 0)
-			printf("%c ", hasil[xx].angka);
-		else if(hasil[xx].op == 1)
 			printf("%d ", hasil[xx].angka);
+		else if(hasil[xx].op == 1)
+			printf("%c ", hasil[xx].angka);
 	}
 	printf("\n\n");
     //printf("%s\n", postfix);
