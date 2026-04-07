@@ -7,6 +7,7 @@ struct data{
 	struct data *next;
 }*head, *tail, *top;
 
+//back push
 void pushQueue(int angka){
 	struct data *curr = (struct data*)malloc(sizeof(struct data));
 	curr->nilai = angka;
@@ -20,6 +21,7 @@ void pushQueue(int angka){
 	}
 }
 
+//front Pop
 int popQueue(){
 	if(head == NULL) return -1;
 
@@ -34,6 +36,7 @@ int popQueue(){
 	return val;
 }
 
+//push front
 void pushStack(int angka){
 	struct data *curr = (struct data*)malloc(sizeof(struct data));
 	curr->nilai = angka;
@@ -41,6 +44,7 @@ void pushStack(int angka){
 	top = curr;
 }
 
+//front pop
 int popStack(){
 	if(top == NULL) return -1;
 
