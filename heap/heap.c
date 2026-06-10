@@ -27,7 +27,8 @@ void pop() {
     int cur = 1;
     while (cur * 2 <= size) {
         int next = cur;
-        if (HEAP[cur] > HEAP[cur * 2]) next = cur * 2;
+        if (HEAP[cur] > HEAP[cur * 2]) 
+			next = cur * 2;
         if (cur * 2 + 1 <= size && HEAP[next] > HEAP[cur * 2 + 1]) {
             next = cur * 2 + 1;
         }
